@@ -7,11 +7,11 @@ const imagemBotaoTrocaDeTema = document.querySelector(".imagem-botao");
 botaoAterarTema.addEventListener("click", () => {
     const modoEscuroEstaAtivo = body.classList.contains("modo-escuro");
 
+    body.classList.toggle("modo-escuro");
+
     if (modoEscuroEstaAtivo) {
-        body.classList.remove("modo-escuro");
         imagemBotaoTrocaDeTema.setAttribute("src", "src/images/sun.png");
     } else {
-            body.classList.add("modo-escuro");
-            imagemBotaoTrocaDeTema.setAttribute("src", "src/images/moon.png");
-        };
-    });
+        imagemBotaoTrocaDeTema.setAttribute("src", "src/images/moon.png");
+    };
+});
